@@ -54,12 +54,12 @@ void main()
 	}
 	fclose(fp);
 }
-//产生小数点后四位的随机数
+// generate a random number 4 digits
 void xh(double *ptr)
 {
 	*ptr = 0.1*(rand()%10) +0.01*(rand()%10)+ 0.001*(rand()%10)+0.0001*(rand()%10);
 }
-//生成1个测量结果
+//generate an observation
 double w1()
 {
 	int a;
@@ -72,7 +72,7 @@ double w1()
 	x = x/N;
 	return (x);
 }
-//计算频率分布
+// compute the distribution
 int w2()
 {
 	int a=0;
@@ -89,7 +89,7 @@ int w2()
 	}
 	return(0);
 }
-//计算平均值
+// compute average
 int w3()
 {
 	double a=0;
@@ -101,7 +101,7 @@ int w3()
 	average=a;
 	return(1);
 }
-//计算平均标准偏差
+// compute SD
 int w4()
 {
 	double a=0;
@@ -114,7 +114,7 @@ int w4()
 	asd=a;
 	return(2);
 }
-//拉依达方法剔除错误值
+// remove abnormal
 int w5()
 {
 	int a=0;
@@ -127,7 +127,7 @@ int w5()
 	n1=a;
 	return(3);
 }
-//建立输出文件
+// build output file
 int f()
 {
 	FILE *fp1;
@@ -140,7 +140,7 @@ int f()
 	l++;
 	FILE *fp2;
 	fp2 = fopen(name[l],"w+");
-	fprintf(fp2,"x的平均值为：%.4lf\n平均值的标准偏差为：%.4lf",average,asd);
+	fprintf(fp2,"Average x：%.4lf\nSD：%.4lf",average,asd);
 	fclose(fp2);
 	l++;
 	return(4);
