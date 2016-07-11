@@ -5,7 +5,7 @@
 //---------------------------------------------
 #include <stdio.h>
 #include <math.h>
-void main(){
+int main(){
 	int n=4;
 	float pi=3.141593,a=0.4,d=0.8,u,v,k,f,i,y;
 	k=2*pi/1e7;d=d/1000;a=a/1000;
@@ -20,4 +20,5 @@ void main(){
 		fprintf(fp,"%f\t%f\n",f,y);
 	}
 	fclose(fp);
+	return 0;
 }

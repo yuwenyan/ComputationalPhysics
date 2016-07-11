@@ -5,7 +5,7 @@
 //---------------------------------------------
 #include <stdio.h>
 #include <math.h>
-void main(){
+int main(){
 	int i;
 	float k=0.75,dt=0.05,x,y,x0,y0,vx,vy,ax,ay,r;
 	FILE *fp;
@@ -27,4 +27,5 @@ void main(){
 		fprintf(fp,"\n");
 	}
 	fclose(fp);
+	return 0;
 }

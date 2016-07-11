@@ -5,7 +5,7 @@
 //---------------------------------------------
 #include <stdio.h>
 #include <math.h>
-void main(){
+int main(){
 	int a1=50, a2=40, t=0, n=1500;
 	int y1, y2, y;
 	float w1=0.05,w2=0.03;
@@ -19,4 +19,5 @@ void main(){
 		fprintf(fp,"%d\t%d\n",t,y);
 	}
 	fclose(fp);
+	return 0;
 }
